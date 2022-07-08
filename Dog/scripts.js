@@ -19,15 +19,12 @@ request.onload = function () {
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
 
-      const h1 = document.createElement('h1')
-      h1.textContent = dog.title
-
       const img = document.createElement('img')
-      img.src = "https://dog.ceo/api/breed/Borzoi/images/random"
+      img.src = dog.img
 
+     
       container.appendChild(card)
-      card.appendChild(h1)
-      card.appendChild(p)
+      card.appendChild(img)
     })
   } else {
     const errorMessage = document.createElement('marquee')

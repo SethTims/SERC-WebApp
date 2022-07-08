@@ -26,9 +26,13 @@ request.onload = function () {
       movie.description = movie.description.substring(0, 300)
       p.textContent = `${movie.description}...`
 
+      const img = document.createElement('img')
+      img.src = movie.image
+
       container.appendChild(card)
       card.appendChild(h1)
       card.appendChild(p)
+      card.appendChild(img)
     })
   } else {
     const errorMessage = document.createElement('marquee')
