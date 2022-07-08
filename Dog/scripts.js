@@ -15,15 +15,20 @@ request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response)
   if (request.status >= 200 && request.status < 400) {
-    data.forEach(dog => {
+    var images = data.message
+    images.forEach(image => {
       const card = document.createElement('div')
       card.setAttribute('class', 'card')
 
+     const h1 = document.createElement('h1')
+        h1.textContent('Evil Wizard')
+
       const img = document.createElement('img')
-      img.src = dog.img
+      img.src = image
 
      
       container.appendChild(card)
+      card.appendChild(h1)
       card.appendChild(img)
     })
   } else {
